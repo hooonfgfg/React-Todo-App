@@ -22,9 +22,9 @@ export default function App() {
       completed: false,
     };
 
-    //원래 있던 할 일에 새로운 할 일 더해주기
+    // 원래 있던 할 일에 새로운 할 일 더해주기
     setTodoData((prev) => [...prev, newTodo]);
-    localStorage.setItem("todoData", JSON.stringify(todoData));
+    localStorage.setItem("todoData", JSON.stringify([...todoData, newTodo]));
     setValue("");
   };
 
