@@ -45,7 +45,7 @@ const List = React.memo(
 
     if (isEditing) {
       return (
-        <div className="flex items-center justify-between w-full px-4">
+        <div className="flex items-center justify-between w-full px-4 py-1 border rounded">
           <form onSubmit={handleSubmit}>
             <input
               className="w-full px-3 py-2 mr-4 text-gray-500"
@@ -56,14 +56,14 @@ const List = React.memo(
           </form>
           <div className="items-center">
             <button
-              className="px-4 py-2 float-right"
+              className="px-4 py-2 float-right text-gray-400 border-2 border-gray-400 rounded hover:text-white hover:bg-gray-200"
               onClick={() => setIsEditing(false)}
               type="button"
             >
               취소
             </button>
             <button
-              className="px-4 py-2 float-right"
+              className="px-4 py-2 mr-2 float-right text-gray-400 border-2 border-gray-400 rounded hover:text-white hover:bg-gray-200"
               type="submit"
               onClick={handleSubmit}
             >
@@ -81,7 +81,7 @@ const List = React.memo(
           {...provided.dragHandleProps}
           className={`${
             snapshot.isDragging ? "bg-gray-400" : "bg-gray-100"
-          } flex items-center justify-between w-full px-4 py-1 my-2 text-gray-600  border rounded`}
+          } flex items-center justify-between w-full px-4 py-1 my-2 text-gray-600 border rounded`}
         >
           <div className="items-center">
             <input
@@ -95,13 +95,13 @@ const List = React.memo(
           </div>
           <div className="items-center">
             <button
-              className="float-right px-4 py-2"
+              className="float-right px-4 py-2 text-gray-400 border-2 border-gray-400 rounded hover:text-white hover:bg-gray-200"
               onClick={() => handleClick(id)}
             >
               x
             </button>
             <button
-              className="float-right px-4 py-2"
+              className="float-right px-4 py-2 mr-2 text-gray-400 border-2 border-gray-400 rounded hover:text-white hover:bg-gray-200"
               onClick={() => setIsEditing(true)}
             >
               수정
